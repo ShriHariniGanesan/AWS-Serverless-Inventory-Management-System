@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Inventory Manager</h1>
+
+    <div class="auth-buttons">
+      <button onclick="login()">Login</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <form id="itemForm">
+      <input type="text" id="itemId" placeholder="Item ID" required />
+      <input type="text" id="itemName" placeholder="Item Name" required />
+      <input type="number" id="quantity" placeholder="Quantity" required />
+      <input type="text" id="category" placeholder="Category" required />
+      <input type="text" id="location" placeholder="Location" required />
+      <button type="submit">Save Item</button>
+    </form>
+
+    <button onclick="loadItems()">Refresh Items</button>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Qty</th>
+          <th>Category</th>
+          <th>Location</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="itemsBody"></tbody>
+    </table>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
